@@ -7,17 +7,12 @@ import { BubbleContext } from "./context/BubbleContext";
 import "./styles.scss";
 
 function App() {
-  const [color, setColor] = useState([{
-    color: "",
-    code: {
-      hex: ""
-    },
-    id: ""
-  }]);
+  const [newColors, setNewColors] = useState([])
+   
 
   return (
     <Router>
-    <BubbleContext.Provider value={{ color, setColor }}>
+    <BubbleContext.Provider value={{ newColors, setNewColors }}>
       <div className="App">
         <Route exact path="/" component={Login} />
         {/* 
